@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: help-marketplace-backend
+    env: docker
+    plan: free
+    dockerfilePath: Dockerfile
+    autoDeploy: false
+    instances: 1
+    env:
+      - key: NODE_ENV
+        value: production
+      - key: JWT_SECRET
+        sync: false
